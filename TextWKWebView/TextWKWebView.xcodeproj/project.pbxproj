@@ -11,7 +11,6 @@
 		722D3E031FEF905100F22B89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722D3E021FEF905100F22B89 /* ViewController.m */; };
 		722D3E061FEF905200F22B89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722D3E041FEF905200F22B89 /* Main.storyboard */; };
 		722D3E081FEF905200F22B89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722D3E071FEF905200F22B89 /* Assets.xcassets */; };
-		722D3E0B1FEF905200F22B89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 722D3E091FEF905200F22B89 /* LaunchScreen.storyboard */; };
 		722D3E0E1FEF905200F22B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 722D3E0D1FEF905200F22B89 /* main.m */; };
 		722D3E161FEF909400F22B89 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722D3E151FEF909400F22B89 /* WebViewController.m */; };
 /* End PBXBuildFile section */
@@ -24,7 +23,6 @@
 		722D3E021FEF905100F22B89 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		722D3E051FEF905200F22B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		722D3E071FEF905200F22B89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		722D3E0A1FEF905200F22B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		722D3E0C1FEF905200F22B89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722D3E0D1FEF905200F22B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		722D3E141FEF909400F22B89 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				722D3E151FEF909400F22B89 /* WebViewController.m */,
 				722D3E041FEF905200F22B89 /* Main.storyboard */,
 				722D3E071FEF905200F22B89 /* Assets.xcassets */,
-				722D3E091FEF905200F22B89 /* LaunchScreen.storyboard */,
 				722D3E0C1FEF905200F22B89 /* Info.plist */,
 				722D3E0D1FEF905200F22B89 /* main.m */,
 			);
@@ -134,7 +131,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				722D3E0B1FEF905200F22B89 /* LaunchScreen.storyboard in Resources */,
 				722D3E081FEF905200F22B89 /* Assets.xcassets in Resources */,
 				722D3E061FEF905200F22B89 /* Main.storyboard in Resources */,
 			);
@@ -163,14 +159,6 @@
 				722D3E051FEF905200F22B89 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		722D3E091FEF905200F22B89 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				722D3E0A1FEF905200F22B89 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,13 +272,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8XYQ5SRK2;
 				INFOPLIST_FILE = TextWKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maoshaoqian.TextWKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,13 +288,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8XYQ5SRK2;
 				INFOPLIST_FILE = TextWKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maoshaoqian.TextWKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

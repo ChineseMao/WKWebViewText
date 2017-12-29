@@ -57,24 +57,24 @@
     NSLog(@"接收到服务器跳转请求之后调用");
 }
 //证书验证处理 基本上无需添加此代理方法
-- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(nonnull void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
-
-    NSLog(@"证书验证处理");
-    // 判断服务器采用的验证方法
-    if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
-        // 如果没有错误的情况下 创建一个凭证，并使用证书
-        if (challenge.previousFailureCount == 0) {
-            NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
-            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
-        }else {
-             //验证失败，取消本次验证
-            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
-        }
-    }else {
-        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
-        
-    }
-}
+//- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(nonnull void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+//
+//    NSLog(@"证书验证处理");
+//    // 判断服务器采用的验证方法
+//    if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
+//        // 如果没有错误的情况下 创建一个凭证，并使用证书
+//        if (challenge.previousFailureCount == 0) {
+//            NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+//            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
+//        }else {
+//             //验证失败，取消本次验证
+//            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+//        }
+//    }else {
+//        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+//
+//    }
+//}
 
 // 在收到响应后，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
